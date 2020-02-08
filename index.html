@@ -27,17 +27,17 @@
                             <ion-card-content>
                                 <IonItem>
                                     <IonLabel position="floating">Item</IonLabel>
-                                    <Ion-Input type="text"></Ion-Input>
+                                    <Ion-Input type="text" id="input-item"></Ion-Input>
                                   </IonItem>
                                 <IonItem>
                                     <IonLabel position="floating">Valor</IonLabel>
-                                    <Ion-Input type="number"></Ion-Input>
+                                    <Ion-Input type="number" id="imput-valor"></Ion-Input>
                                   </IonItem>
                                   <div class="ion-margin-vertical ion-text-right">
-                                  <ion-button fill="outline" color="danger">
+                                  <ion-button fill="outline" color="danger" id="btn-cancel">
                                     <ion-icon slot="start" name="close"></ion-icon> 
                                     Apagar</ion-button>
-                                  <ion-button fill="outline" color="secondary">
+                                  <ion-button fill="outline" color="secondary" id="btn-confirm">
                                     <ion-icon slot="start" name="cart"></ion-icon> 
                                     Adicionar</ion-button>
                                 </div>
@@ -48,6 +48,6 @@
             </ion-grid>
         </ion-content>  
     </ion-app>
-
+<script src="app.js"></script>
 </body>
 </html>
