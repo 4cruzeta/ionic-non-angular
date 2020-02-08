@@ -4,5 +4,17 @@ const cancelBtn = document.querySelector('#btn-cancel');
 const confirmlBtn = document.querySelector('#btn-confirm');
 
 confirmlBtn.addEventListener('click', () => {
-    console.log('Funcionou !!!')
+    const enteredItem = itemInput.value;
+    const enteredValor = valorInput.value;
+
+    if (
+        enteredItem.trim().length <= 0 ||
+        enteredValor <= 0 ||
+        enteredValor.trim().length <= 0
+    ) {
+        return;
+    }
+
+    console.log(enteredItem, enteredValor);
+
 });
