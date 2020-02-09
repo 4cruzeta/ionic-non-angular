@@ -3,6 +3,15 @@ const valorInput = document.querySelector('#input-valor');
 const cancelBtn = document.querySelector('#btn-cancel');
 const confirmlBtn = document.querySelector('#btn-confirm');
 const expensesList = document.querySelector('#expenses-list');
+const totalExpensesOutput = document.querySelector('#total-expenses');
+const alertCtrl = document.querySelector('ion-alert-controller');
+
+let totalExpenses = 0;
+
+const clear = () => {
+    itemInput.value = '';
+    valorInput.value = '';
+};    
 
 confirmlBtn.addEventListener('click', () => {
     const enteredItem = itemInput.value;
@@ -20,4 +29,10 @@ confirmlBtn.addEventListener('click', () => {
     newItem.textContent = enteredItem + ': $' +enteredValor;
 
     expensesList.appendChild(newItem);
+
+    totalExpenses += +enteredValor;
+    totalExpensesOutput.textContent = totalExpenses;
+    clear();
 });
+
+cancelBtn.addEventListener('click', clear);
