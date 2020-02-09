@@ -22,6 +22,15 @@ confirmlBtn.addEventListener('click', () => {
         enteredValor <= 0 ||
         enteredValor.trim().length <= 0
     ) {
+        alertCtrl
+        .create({
+          message: 'Favor inserir item e valor válidos.',
+          header: 'Problema !!!',
+          buttons: ['Beleza']
+        })
+        .then(alertElement => {
+          alertElement.present();
+        });
         return;
     }
 
