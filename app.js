@@ -2,6 +2,7 @@ const itemInput = document.querySelector('#input-item');
 const valorInput = document.querySelector('#input-valor');
 const cancelBtn = document.querySelector('#btn-cancel');
 const confirmlBtn = document.querySelector('#btn-confirm');
+const expensesList = document.querySelector('#expenses-list');
 
 confirmlBtn.addEventListener('click', () => {
     const enteredItem = itemInput.value;
@@ -15,6 +16,8 @@ confirmlBtn.addEventListener('click', () => {
         return;
     }
 
-    console.log(enteredItem, enteredValor);
+    const newItem = document.createElement('ion-item');
+    newItem.textContent = enteredItem + ': $' +enteredValor;
 
+    expensesList.appendChild(newItem);
 });
